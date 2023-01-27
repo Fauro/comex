@@ -1,10 +1,10 @@
 <x-layout title="Categorias">
 
-    <a href="/categorias/criar">Cadastrar Nova</a>
+    <a class="btn btn-primary" href="/categorias/criar">Cadastrar Nova</a>
 
-<ul>
+<ul class="list-group mt-2">
 @foreach ($categorias as $categoria)
-    <li>{{ $categoria->nome }}</li>
+    <li class="list-group-item">{{ $categoria->nome }}</li>
 @endforeach
     
 </ul>
