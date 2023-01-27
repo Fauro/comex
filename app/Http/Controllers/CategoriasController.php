@@ -12,4 +12,16 @@ class CategoriasController extends Controller
 
         return view('categorias.index', compact('categorias'));
     }
+
+    public function create(){ 
+        return view('categorias.create');
+    }
+
+    public function store(Request $request){ 
+        $categoria = new Categoria();
+        $categoria->nome = $request->input('nome');
+        $categoria->save();
+
+        return redirect('/categorias');
+    }
 }
